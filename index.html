@@ -16,15 +16,15 @@ color:#222;
 nav{
 background:#0f172a;
 padding:15px;
-text-align;
+text-align:center;
 }
-
 nav a{
-color;
-text-decoration;
+color:white;
+text-decoration:none;
 margin:0 15px;
 font-weight:600;
 }
+
 .hero{
 background:linear-gradient(135deg,#0f172a,#1e3a8a);
 color:white;
@@ -48,16 +48,18 @@ padding:50px 8% 70px 8%;
 
 .btn{
 background:#f59e0b;
-color;
+color:white;
 padding:12px 20px;
 border-radius:8px;
-text-decoration;
-font-weight;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin:8px;
 }
-
-.btn{
+.btn:hover{
 opacity:0.9;
 }
+
 .card{
     background:white;
     border-radius:12px;
@@ -69,6 +71,30 @@ opacity:0.9;
 .card:hover{
     transform:translateY(-5px);
 }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+align-items:stretch;
+}
+.section{
+padding:35px 8%;
+}
+#dashboards{
+background:#ffffff;
+padding:60px 8%;
+margin-top:30px;
+margin-bottom:30px;
+border-top:3px solid #f59e0b;
+border-bottom:3px solid #f59e0b;
+}
+h2{
+text-align:center;
+margin-bottom:30px;
+color:#1e3a8a;
+}    
 </style>
 </head>
 <body>
