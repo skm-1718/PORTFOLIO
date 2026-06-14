@@ -1,18 +1,38 @@
 
 <!DOCTYPE html>
 <html lang="en">
+ html{
+    scroll-behavior:smooth;
+}   
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sangram Keshari Mohapatra | Data Analyst Portfolio</title>
 <style>
+<script>
+document.getElementById("themeToggle").onclick=function(){
+document.body.classList.toggle("light-mode");
+};
+</script>   
+ <button id="themeToggle"
+class="btn"
+style="position:fixed;top:20px;right:20px;z-index:999;">
+🌙 Mode
+</button> 
+<script>
+document.getElementById("themeToggle").onclick=function(){
+document.body.classList.toggle("light-mode");
+};
+</script>    
 body{
     margin:0;
     font-family:Arial,sans-serif;
     background:#111827;
     color:white;
 }
-
+html{
+    scroll-behavior:smooth;
+}
 /* PUT HERE */
 
 
@@ -90,6 +110,23 @@ opacity:0.9;
     transform:translateY(-5px);
     box-shadow:0 8px 20px rgba(0,0,0,0.15);
 }
+.skill-bar{
+height:12px;
+background:#ddd;
+border-radius:20px;
+margin-bottom:20px;
+overflow:hidden;
+}
+.skill-bar span{
+display:block;
+height:100%;
+background:#f59e0b;
+animation:grow 2s ease forwards;
+}
+
+@keyframes grow{
+from{width:0;}
+}    
 #dashboards .card{
     padding:15px;
 }
@@ -126,6 +163,27 @@ margin-bottom:15px;
 color:#1e3a8a;
 margin-top:0;
 }
+.light-mode{
+background:#f8fafc;
+color:#111827;
+}
+.light-mode .card{
+background:white;
+color:#111827;
+}  
+input,
+textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:8px;
+border:1px solid #ccc;
+box-sizing:border-box;
+}
+
+textarea{
+resize:vertical;
+}    
 </style>
 </head>
 <body>
@@ -331,6 +389,27 @@ View Project
 
 </div>
 </div>
+ <section class="section">
+
+<h2>GitHub Profile</h2>
+
+<div class="card">
+
+<h3>Open Source Projects</h3>
+
+<p>
+Explore my Data Analytics, SQL, Excel, Python, and Power BI projects.
+</p>
+
+<a class="btn"
+href="https://github.com/skm-1718"
+target="_blank">
+Visit GitHub
+</a>
+
+</div>
+
+</section>   
     
 <section id="dashboards" class="section">
 
@@ -426,14 +505,17 @@ Built an interactive Power BI dashboard to analyze ₹5.99 Cr sales performance,
 
 <div class="card">
 
-<h3>Programming & Analytics</h3>
-<p>SQL | Python | Pandas | NumPy</p>
+<h3>SQL</h3>
+<div class="skill-bar"><span style="width:90%"></span></div>
 
-<h3>Visualization</h3>
-<p>Power BI | Tableau | Excel</p>
+<h3>Python</h3>
+<div class="skill-bar"><span style="width:85%"></span></div>
 
-<h3>Business & Analytics</h3>
-<p>EDA | Data Cleaning | ETL | Business Intelligence | Financial Analysis</p>
+<h3>Power BI</h3>
+<div class="skill-bar"><span style="width:90%"></span></div>
+
+<h3>Excel</h3>
+<div class="skill-bar"><span style="width:95%"></span></div>
 
 </div>
 
@@ -460,6 +542,26 @@ LinkedIn:
 View Profile
 </a>
 </p>
+<form>
+
+<input type="text"
+placeholder="Your Name"
+required>
+
+<input type="email"
+placeholder="Your Email"
+required>
+
+<textarea
+placeholder="Your Message"
+rows="5">
+</textarea>
+
+<button class="btn">
+Send Message
+</button>
+
+</form>    
 
 </div>
 
